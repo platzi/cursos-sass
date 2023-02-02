@@ -2,7 +2,7 @@ $primary-color: #FFEFE7;
 $secondary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
 $primary-text-color: #7C6A0A;
-$quaternion-color:#FA9500;
+$quaternary-color:#FA9500;
 $font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph-size: 1.5em;
 
@@ -59,7 +59,7 @@ article{
 	button{
 		width: 12vw;
 		padding: 20px;
-		background-color: $quaternion-color;
+		background-color: $quaternary-color;
 		border-style: none;
 		border-radius: 35px;
 		color: white;
@@ -73,7 +73,7 @@ article{
 }
 
 section{
-	width: 100%;
+	width: auto;
 	height: auto;
 	padding: 60px;
 	h2{
@@ -81,31 +81,64 @@ section{
 		font-size: 2em;
 	}
 	.healthcare{
+		padding-bottom: 60px;
 		h2{
 			font-weight: 300;
 			padding-bottom: 60px;
 		}
-		.product-card{
-			width: 12vw;
+		.card-section{
+			display: flex;
+			width: auto;
 			height: auto;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 200px;
+			row-gap: 80px;
+		}
+		.product-card{
+			width: 14vw;
+			height: 45vh;
 			background-color: $secondary-color;
 			color: $primary-text-color;
 			padding: 20px;
 			border-radius: 8px;
-			img{
-				width: 200px;
-				height: 250px;
-				background-image: cover;
-				border-radius: 6px;
+			.icon{
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				padding-bottom: 12px;
+				svg{
+					width: 28px;
+					height: 28px;
+				}
 			}
+			.product-image{
+				width: 100%;
+				height: auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img{
+					width: 12vw;
+					height: 30vh;
+					object-fit: cover;
+					border-radius: 6px;
+				}
+			}
+		}
+	}
+	.furniture{
+		@extend .healthcare;
+		.product-card{
+			background-color: $tertiary-color;
+			color:white
 		}
 	}
 }
 
-
-
 footer{
-	background-color: $quaternion-color;
+	background-color: $quaternary-color;
 	width: 100%;
 	height: 250px;
 }
