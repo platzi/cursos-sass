@@ -40,6 +40,7 @@ article{
 	display: flex;
 	padding-left: 45px;
 	padding-right: 45px;
+	padding-top: 70px;
 	justify-content: space-between;
 	.impact-section{
 		display: flex;
@@ -68,6 +69,36 @@ article{
 	img{
 		width: 25vw;
 		border-radius: 19px;
+	}
+}
+
+section{
+	width: 100%;
+	height: auto;
+	padding: 60px;
+	h2{
+		color: $primary-text-color;
+		font-size: 2em;
+	}
+	.healthcare{
+		h2{
+			font-weight: 300;
+			padding-bottom: 60px;
+		}
+		.product-card{
+			width: 12vw;
+			height: auto;
+			background-color: $secondary-color;
+			color: $primary-text-color;
+			padding: 20px;
+			border-radius: 8px;
+			img{
+				width: 200px;
+				height: 250px;
+				background-image: cover;
+				border-radius: 6px;
+			}
+		}
 	}
 }
 
